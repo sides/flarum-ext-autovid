@@ -38,10 +38,11 @@ class FormatAutovid
      */
     public function addAutovidFormatter(ConfigureFormatter $event)
     {
-        $name = "Autovideo";
-        $event->configurator->plugins->set(
-            $name,
-            "Sides\\Autovid\\TextFormatter\\Plugins\\{$name}\\Configurator"
-        );
+        foreach (['Autovideo', 'Autoaudio'] as $plugin) {
+            $event->configurator->plugins->set(
+                $plugin,
+                "Sides\\Autovid\\TextFormatter\\Plugins\\{$plugin}\\Configurator"
+            );
+        }
     }
 }

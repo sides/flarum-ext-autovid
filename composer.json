@@ -1,0 +1,35 @@
+{
+    "name": "sides/flarum-ext-autovid",
+    "description": "Automatically convert web video links into media elements.",
+    "type": "flarum-extension",
+    "keywords": ["flarum", "video", "embed"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sides",
+            "email": "sides@sides.tv"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/sides/flarum-ext-autovid/issues",
+        "source": "https://github.com/sides/flarum-ext-autovid"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sides\\Autovid\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Autovid",
+            "icon": {
+                "name": "file-video-o",
+                "backgroundColor": "#541",
+                "color": "#a92"
+            }
+        }
+    }
+}

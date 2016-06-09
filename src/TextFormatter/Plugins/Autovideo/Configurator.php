@@ -24,4 +24,9 @@ class Configurator extends ConfiguratorBase
         $tag->attributes->add($this->attrName)->filterChain->append($filter);
         $this->template = '<video src="{@' . $this->attrName . '}" controls>Video playback unsupported</video>';
     }
+
+    public function getJSParser()
+    {
+        return \file_get_contents(realpath(__DIR__.'/Parser.js'));
+    }
 }

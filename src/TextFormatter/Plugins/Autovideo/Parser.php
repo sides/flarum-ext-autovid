@@ -14,9 +14,8 @@ class Parser extends ParserBase
     {
         $tagName = $this->config['tagName'];
         $attrName = $this->config['attrName'];
-        foreach ($matches as $m)
-        {
-            $tag = $this->parser->addSelfClosingTag($tagName, $m[0][1], strlen($m[0][0]));
+        foreach ($matches as $m) {
+            $tag = $this->parser->addSelfClosingTag($tagName, $m[0][1], \strlen($m[0][0]));
             $tag->setAttribute($attrName, $m[0][0]);
             $tag->setSortPriority(-1);
         }

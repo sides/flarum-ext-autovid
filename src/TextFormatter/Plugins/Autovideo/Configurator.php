@@ -22,7 +22,7 @@ class Configurator extends ConfiguratorBase
         $tag = $this->configurator->tags->add($this->tagName);
         $filter = $this->configurator->attributeFilters->get('#url');
         $tag->attributes->add($this->attrName)->filterChain->append($filter);
-        $tag->template = '<video src="{@' . $this->attrName . '}" controls>Video playback unsupported</video>';
+        $tag->template = '<video style="max-width:100%" src="{@' . $this->attrName . '}" controls>Video playback unsupported</video>';
     }
 
     public function getJSParser()

@@ -20,8 +20,8 @@ class Configurator extends ConfiguratorBase
             return;
         }
         $tag = $this->configurator->tags->add($this->tagName);
-        $filter = $this->configurator->attributeFilters->get('#url');
-        $tag->attributes->add($this->attrName)->filterChain->append($filter);
+        //$filter = $this->configurator->attributeFilters->get('#url');
+        //$tag->attributes->add($this->attrName)->filterChain->append($filter);
         $this->template = '<video src="{@' . $this->attrName . '}" controls>Video playback unsupported</video>';
     }
 

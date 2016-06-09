@@ -11,7 +11,7 @@ use s9e\TextFormatter\Plugins\ConfiguratorBase;
 class Configurator extends ConfiguratorBase
 {
     protected $attrName = 'src';
-    protected $regexp = '#https?://[-.\\w]+/[-./\\w]+\\.(?:mp4|webm|ogv)(?!\\S)#';
+    protected $regexp = '#https?://[-.\\w]+/[-./%\\w]+\\.(?:mp4|webm|ogv)(?!\\S)#';
     protected $tagName = 'AUTOVIDEO';
 
     protected function setUp()
